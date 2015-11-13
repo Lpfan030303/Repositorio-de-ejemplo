@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<script.h>
+#define num 7
+#define p printf
+#define s scanf
+struct vongola{char nombre[30]; char *nacimiento[20]; char* domicilio[50]; char *telefono[20]; char *pasatiempo[100];anillo[30];};			//scanf("%[^\n], &v);  Funcion para poder leer espacios
+static strut vongola guardian[num];
+informacion(void);
+mostrar(void);
+FILE inf*;
+main()
+{
+	int op;
+	do
+	{
+		do
+		{
+			system("cls");
+			p("Menu\n");
+			p("1.-Ingresar informacion guardianes\n2.-Mostrar Informacion\n3.-Salir\n");
+			p("Ingresa tu opcion\n");
+			s("%d", &op);
+		}
+		while(op<0 && op>3);
+		switch(op)
+		{
+			case 1: 
+				informacion();
+				break;
+			case 2:
+				mostrar();
+				break;
+			case 3:
+				break;
+		}
+	}
+	while(op!=3);
+}
+informacion(void)
+{
+	int i,j;
+	
+	if((inf=fopen("guardianes.tx", "w"))==NULL)
+	{
+		p("No se pudo abrir el archivo\n");
+	}
+	else
+	{
+		p("En que registro quieres ingrsar esta informacio?\n");
+		s("%d", &i);
+		p("Ingresa el nombre del guardian\n");
+		s("%d", stdin);
+		s("%s", &guardina[i].nombre);
+		
